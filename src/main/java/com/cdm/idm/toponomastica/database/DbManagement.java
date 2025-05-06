@@ -69,4 +69,13 @@ public class DbManagement {
         PREFIX_URL = pREFIX_URL;
     }
 
+    /**
+     * Metodo che costruisce la url per la connessione al database
+     * 
+     * @return la url della connessione al database
+     */
+    public String getUrl() {
+        return getPREFIX_URL() + getIp() + ":" + getPort() + "/" + getNameDb();
+    }
+
 }
