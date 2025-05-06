@@ -14,5 +14,6 @@ public class ConstantToponomastica {
     public static String USERNAME = "openidm";
     public static String PASSWORD = "!4dm1n1DM!";
     public static String NAME_DB = "openidm";
+    public static String PREFIX_URL = "jdbc:postgresql://";
 
 }
