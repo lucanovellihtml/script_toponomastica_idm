@@ -22,8 +22,7 @@ public class DbResidenceCheck {
         Statement statement = null;
         ResultSet resultSet = null;
 
-        DbManagement dbManagement = new DbManagement(ConstantToponomastica.IP, ConstantToponomastica.USERNAME,
-                ConstantToponomastica.PASSWORD, ConstantToponomastica.PORT, ConstantToponomastica.NAME_DB);
+        DbManagement dbManagement = new DbManagement();
 
         // Creazione e apertura della connessione al database
         Connection connection = dbManagement.openConnection();
