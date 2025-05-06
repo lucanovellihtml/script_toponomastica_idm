@@ -18,7 +18,7 @@ public class DbManagement {
         this.user = user;
         this.password = password;
         this.nameDb = nameDb;
-        this.ip = ip;
+        this.port = port;
     }
 
     public String getIp() {
@@ -88,7 +88,7 @@ public class DbManagement {
         // Variabile oggetto connection
         Connection connection = null;
 
-        String method = "[opeConnection]::";
+        String method = "[openConnection]::";
 
         try {
 
