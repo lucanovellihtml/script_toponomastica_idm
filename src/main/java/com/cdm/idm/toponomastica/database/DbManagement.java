@@ -2,71 +2,21 @@ package com.cdm.idm.toponomastica.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+
+import com.cdm.idm.toponomastica.util.ConstantToponomastica;
 
 public class DbManagement {
 
     private String ip, user, password, port, nameDb;
 
-    private String PREFIX_URL = "jdbc:postgresql://";
-
     /* Costruttore */
-    public DbManagement(String ip, String user, String password, String port, String nameDb) {
-        this.ip = ip;
-        this.user = user;
-        this.password = password;
-        this.nameDb = nameDb;
-        this.port = port;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public String getUser() {
-        return user;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getPort() {
-        return port;
-    }
-
-    public String getNameDb() {
-        return nameDb;
-    }
-
-    public String getPREFIX_URL() {
-        return PREFIX_URL;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setPort(String port) {
-        this.port = port;
-    }
-
-    public void setNameDb(String nameDb) {
-        this.nameDb = nameDb;
-    }
-
-    public void setPREFIX_URL(String pREFIX_URL) {
-        PREFIX_URL = pREFIX_URL;
+    public DbManagement() {
+        this.ip = ConstantToponomastica.IP;
+        this.user = ConstantToponomastica.USERNAME;
+        this.password = ConstantToponomastica.PASSWORD;
+        this.nameDb = ConstantToponomastica.NAME_DB;
+        this.port = ConstantToponomastica.PORT;
     }
 
     /**
@@ -75,7 +25,8 @@ public class DbManagement {
      * @return la url della connessione al database
      */
     public String getUrl() {
-        return this.PREFIX_URL + this.ip + ":" + this.port + "/" + this.nameDb;
+        return ConstantToponomastica.PREFIX_URL + this.ip + ":" + this.port + "/"
+                + this.nameDb;
     }
 
     /**
