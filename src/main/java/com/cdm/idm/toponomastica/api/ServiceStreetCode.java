@@ -1,34 +1,24 @@
 package com.cdm.idm.toponomastica.api;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.namespace.QName;
-
 import com.cdm.idm.toponomastica.api.soap.org.datacontract.schemas._2004._07.wcftopo.ArrayOfTopoServiceTypeGetVieFTopoStreet;
 import com.cdm.idm.toponomastica.api.soap.org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetVieFTopoStreet;
-import com.cdm.idm.toponomastica.api.soap.org.tempuri.ObjectFactory;
-import com.cdm.idm.toponomastica.api.soap.org.tempuri.SitGetVieFTopo;
 import com.cdm.idm.toponomastica.api.soap.org.tempuri.Toponomastica45;
 import com.cdm.idm.toponomastica.api.soap.org.tempuri.Toponomastica45PortType;
-import com.cdm.idm.toponomastica.database.DbResidenceCheck;
-import com.cdm.idm.toponomastica.user.User;
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
 
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.ws.BindingProvider;
 import jakarta.xml.ws.handler.MessageContext;
-import jakarta.xml.ws.handler.soap.SOAPHandler;
 
 public class ServiceStreetCode {
 
-    public void getServiceStreetCode(String pToponomy, String pType) {
+    public Map<String, Integer> getServiceStreetCode(String pToponomy, String pType) {
 
-        SitGetVieFTopo requestVieFTopo = new SitGetVieFTopo();
-        ObjectFactory objectFactory = new ObjectFactory();
+        Map<String, Integer> resultValueStreet = new HashMap<>();
 
         try {
 
@@ -72,11 +62,21 @@ public class ServiceStreetCode {
             /*
              * Controlliamo se la lista sia vuota.
              * In caso di lista valorizzata, salviamo il valore <StateCode> e <StreetCode>.
+             * Viene controllato il campo <TopoVia> con l'input <pType> ---> questo
+             * controllo serve in caso i piu' <Street> come risultato.
+             * In caso di esito positivo, vengono mappati i valori trovati e fatto il break
+             * del ciclo.
              */
             if (!listValueStreet.isEmpty()) {
 
                 for (TopoServiceTypeGetVieFTopoStreet street : listValueStreet) {
-                    System.out.println("OGGETTO ---> " + street.getStreetCode());
+
+                    if (street.getTopoVia().getValue().equalsIgnoreCase("via")) {
+                        resultValueStreet.put("streetcode", street.getStreetCode());
+                        resultValueStreet.put("statuscode", street.getStateCode());
+                        break;
+                    }
+
                 }
 
             }
@@ -84,6 +84,8 @@ public class ServiceStreetCode {
         } catch (Exception e) {
             System.err.println(e);
         }
+
+        return resultValueStreet;
 
     }
 
