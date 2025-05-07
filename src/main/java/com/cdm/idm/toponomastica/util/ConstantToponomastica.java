@@ -16,4 +16,7 @@ public class ConstantToponomastica {
     public static String NAME_DB = "openidm";
     public static String PREFIX_URL = "jdbc:postgresql://";
 
+    // Parametri per le chiamate soap
+    public static String PTOKEN = "54LTT512;";
+
 }
