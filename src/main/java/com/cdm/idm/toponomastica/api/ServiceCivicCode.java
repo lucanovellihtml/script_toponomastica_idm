@@ -28,7 +28,7 @@ public class ServiceCivicCode {
 
             // Creazione della mappatura per i campi headers
             Map<String, List<String>> headers = new HashMap<>();
-            headers.put("Authorization", List.of("Bearer 9d32b91c-20c8-3e40-979b-595a3b267066"));
+            headers.put("Authorization", List.of(ConstantToponomastica.TOKENHEADER));
 
             /*
              * Creazione dell'oggetto per accedere al servizio del wsdl.
@@ -40,10 +40,10 @@ public class ServiceCivicCode {
 
             /*
              * Attraverso il metodo "sitGetVieFCode" andiamo a richiamare il servizio.
-             * Andiamo a impostare i parametri ottenuti dalla precedente chiamata al metodo
+             * Andiamo a impostare i parametri ottenuti dalla precedente chiamata
              * "sitGetViaFTopo".
-             * Attraverso il metodo "getStreet" otteniamo la response filtratta all'odonimo
-             * XML <Street>.
+             * Attraverso il metodo "getCivic" otteniamo la response filtratta all'odonimo
+             * XML <Civic>.
              */
             TopoServiceTypeGetViaFCode response = port.sitGetViaFCode(ConstantToponomastica.PTOKEN,
                     streetCodeValue,
@@ -51,13 +51,26 @@ public class ServiceCivicCode {
                     streetStatusCode,
                     ConstantToponomastica.PREFERENCE);
 
+            /*
+             * Dalla response otteniamo il valore degli odonomi trovati e creiamo l'array
+             * dei valori.
+             * Attraverso il metodo getTopoServiceTypeGetViaFCodeCivic recuperiamo la lista
+             * dei singoli campi dettagliati.
+             */
             ArrayOfTopoServiceTypeGetViaFCodeCivic arrayValue = response.getCivic().getValue();
-
             List<TopoServiceTypeGetViaFCodeCivic> listValueCivic = arrayValue.getTopoServiceTypeGetViaFCodeCivic();
 
-            for (TopoServiceTypeGetViaFCodeCivic civicCode : listValueCivic) {
-                System.out.println(civicCode.getIDC());
-                resultCodeIdc = civicCode.getIDC();
+            /*
+             * Controlliamo se la lista sia vuota.
+             * In caso di lista valorizzata, salviamo il valore <IDC>.
+             * In caso di esito positivo, vengono mappati i valori trovati.
+             */
+            if (!listValueCivic.isEmpty()) {
+
+                for (TopoServiceTypeGetViaFCodeCivic civicCode : listValueCivic) {
+                    System.out.println(civicCode.getIDC());
+                    resultCodeIdc = civicCode.getIDC();
+                }
             }
 
         } catch (Exception e) {
