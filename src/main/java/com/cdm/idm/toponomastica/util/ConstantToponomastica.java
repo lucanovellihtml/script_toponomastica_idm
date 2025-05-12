@@ -19,5 +19,6 @@ public class ConstantToponomastica {
     // Parametri per le chiamate soap
     public static String PTOKEN = "54LTT512;";
     public static Integer PREFERENCE = 1;
+    public static String TOKENHEADER = "Bearer 9d32b91c-20c8-3e40-979b-595a3b267066";
 
 }
