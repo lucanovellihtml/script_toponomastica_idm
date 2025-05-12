@@ -28,7 +28,7 @@ public class ServiceStreetCode {
 
             // Creazione della mappatura per i campi headers
             Map<String, List<String>> headers = new HashMap<>();
-            headers.put("Authorization", List.of("Bearer 9d32b91c-20c8-3e40-979b-595a3b267066"));
+            headers.put("Authorization", List.of(ConstantToponomastica.TOKENHEADER));
 
             /*
              * Creazione dell'oggetto per accedere al servizio del wsdl.
@@ -46,8 +46,8 @@ public class ServiceStreetCode {
              */
             JAXBElement<ArrayOfTopoServiceTypeGetVieFTopoStreet> response = port.sitGetVieFTopo(
                     ConstantToponomastica.PTOKEN,
-                    "mercantini luigi",
-                    "via").getStreet();
+                    pToponomy,
+                    pType).getStreet();
 
             /*
              * Dalla response otteniamo il valore degli odonomi trovati e creiamo l'array
@@ -91,7 +91,7 @@ public class ServiceStreetCode {
 
     public static void main(String[] args) {
         ServiceStreetCode prova = new ServiceStreetCode();
-        prova.getServiceStreetCode(null, null);
+        prova.getServiceStreetCode("mercantini luigi", "via");
     }
 
 }
