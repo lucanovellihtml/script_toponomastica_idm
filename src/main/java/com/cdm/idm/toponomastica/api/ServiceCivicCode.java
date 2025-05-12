@@ -18,6 +18,8 @@ public class ServiceCivicCode {
 
     public int getServiceCivicCode(Integer streetCodeValue, String streetNumberCivic, Integer streetStatusCode) {
 
+        String method = "[getServiceCivicCode]::";
+
         int resultCodeIdc = 0;
 
         try {
@@ -68,7 +70,7 @@ public class ServiceCivicCode {
             if (!listValueCivic.isEmpty()) {
 
                 for (TopoServiceTypeGetViaFCodeCivic civicCode : listValueCivic) {
-                    System.out.println(civicCode.getIDC());
+                    System.out.println(method + "CivicCode = " + civicCode.getIDC());
                     resultCodeIdc = civicCode.getIDC();
                 }
             }
