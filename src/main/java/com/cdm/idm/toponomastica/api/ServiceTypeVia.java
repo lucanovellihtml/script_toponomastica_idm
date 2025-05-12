@@ -29,7 +29,7 @@ public class ServiceTypeVia {
 
             // Creazione della mappatura per i campi headers
             Map<String, List<String>> headers = new HashMap<>();
-            headers.put("Authorization", List.of("Bearer 9d32b91c-20c8-3e40-979b-595a3b267066"));
+            headers.put("Authorization", List.of(ConstantToponomastica.TOKENHEADER));
 
             /*
              * Creazione dell'oggetto per accedere al servizio del wsdl.
@@ -48,22 +48,26 @@ public class ServiceTypeVia {
              * Dalla response otteniamo il valore degli odonomi trovati e creiamo l'array
              * dei valori.
              */
-            TopoServiceTypeGetTipoVia response = port.sitGetTipoVia(ConstantToponomastica.PTOKEN, "via");
+            TopoServiceTypeGetTipoVia response = port.sitGetTipoVia(ConstantToponomastica.PTOKEN, pType);
             JAXBElement<ArrayOfTopoServiceTypeGetCivicoTipoViaType> arrayType = response.getType();
 
             /*
              * Attraverso il metodo getTopoServiceTypeGetCivicoTipoViaType recuperiamo la
              * lista dei singoli campi dettagliati.
+             * Controlliamo se la lista sia vuota.
              * Cicliamo la lista e per ogni oggetto, controlliamo che l'input <pType>
              * coincida con il campo <DescriptionExtended>.
              * In caso di esito positivo, viene memorizzato il campo >Code>.
              */
-            List<TopoServiceTypeGetCivicoTipoViaType> list = arrayType.getValue()
+            List<TopoServiceTypeGetCivicoTipoViaType> listTypeAddress = arrayType.getValue()
                     .getTopoServiceTypeGetCivicoTipoViaType();
 
-            for (TopoServiceTypeGetCivicoTipoViaType elementVia : list) {
-                if (elementVia.getDescriptionExtended().getValue().equalsIgnoreCase("via"))
-                    resultCodeVie = elementVia.getCode().getValue();
+            if (!listTypeAddress.isEmpty()) {
+
+                for (TopoServiceTypeGetCivicoTipoViaType elementVia : listTypeAddress) {
+                    if (elementVia.getDescriptionExtended().getValue().equalsIgnoreCase("via"))
+                        resultCodeVie = elementVia.getCode().getValue();
+                }
             }
 
         } catch (Exception e) {
@@ -76,7 +80,7 @@ public class ServiceTypeVia {
 
     public static void main(String[] args) {
         ServiceTypeVia prova = new ServiceTypeVia();
-        prova.getServiceTypeVia(null);
+        prova.getServiceTypeVia("via");
     }
 
 }
