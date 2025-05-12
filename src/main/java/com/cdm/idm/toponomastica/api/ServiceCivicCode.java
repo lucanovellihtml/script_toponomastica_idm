@@ -16,11 +16,11 @@ import jakarta.xml.ws.handler.MessageContext;
 
 public class ServiceCivicCode {
 
-    public int getServiceCivicCode(Integer streetCodeValue, String streetNumberCivic, Integer streetStatusCode) {
+    public Integer getServiceCivicCode(Integer streetCodeValue, String streetNumberCivic, Integer streetStatusCode) {
 
         String method = "[getServiceCivicCode]::";
 
-        int resultCodeIdc = 0;
+        Integer resultCodeIdc = null;
 
         try {
 
