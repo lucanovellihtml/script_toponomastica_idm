@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.cdm.idm.toponomastica.api.soap.org.datacontract.schemas._2004._07.wcftopo.ArrayOfTopoServiceTypeGetCivicoTipoViaType;
-import com.cdm.idm.toponomastica.api.soap.org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetCivicoTipoViaType;
-import com.cdm.idm.toponomastica.api.soap.org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetTipoVia;
-import com.cdm.idm.toponomastica.api.soap.org.tempuri.Toponomastica45;
-import com.cdm.idm.toponomastica.api.soap.org.tempuri.Toponomastica45PortType;
+import org.datacontract.schemas._2004._07.wcftopo.ArrayOfTopoServiceTypeGetCivicoTipoViaType;
+import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetCivicoTipoViaType;
+import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetTipoVia;
+import org.tempuri.Toponomastica45;
+import org.tempuri.Toponomastica45PortType;
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
 
 import jakarta.xml.bind.JAXBElement;
@@ -62,7 +62,7 @@ public class ServiceTypeVia {
                     .getTopoServiceTypeGetCivicoTipoViaType();
 
             for (TopoServiceTypeGetCivicoTipoViaType elementVia : list) {
-                if (pType.equalsIgnoreCase(elementVia.getDescriptionExtended().getValue()))
+                if (elementVia.getDescriptionExtended().getValue().equalsIgnoreCase("via"))
                     resultCodeVie = elementVia.getCode().getValue();
             }
 

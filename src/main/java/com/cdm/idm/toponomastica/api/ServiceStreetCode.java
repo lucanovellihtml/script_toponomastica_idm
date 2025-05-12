@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.cdm.idm.toponomastica.api.soap.org.datacontract.schemas._2004._07.wcftopo.ArrayOfTopoServiceTypeGetVieFTopoStreet;
-import com.cdm.idm.toponomastica.api.soap.org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetVieFTopoStreet;
-import com.cdm.idm.toponomastica.api.soap.org.tempuri.Toponomastica45;
-import com.cdm.idm.toponomastica.api.soap.org.tempuri.Toponomastica45PortType;
+import org.datacontract.schemas._2004._07.wcftopo.ArrayOfTopoServiceTypeGetVieFTopoStreet;
+import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetVieFTopoStreet;
+import org.tempuri.Toponomastica45;
+import org.tempuri.Toponomastica45PortType;
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
 
 import jakarta.xml.bind.JAXBElement;
