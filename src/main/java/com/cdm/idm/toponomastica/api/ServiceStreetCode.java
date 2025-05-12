@@ -18,6 +18,8 @@ public class ServiceStreetCode {
 
     public Map<String, Integer> getServiceStreetCode(String pToponomy, String pType) {
 
+        String method = "[getServiceStreetCode]::";
+
         Map<String, Integer> resultValueStreet = new HashMap<>();
 
         try {
@@ -63,7 +65,7 @@ public class ServiceStreetCode {
              * Controlliamo se la lista sia vuota.
              * In caso di lista valorizzata, salviamo il valore <StateCode> e <StreetCode>.
              * Viene controllato il campo <TopoVia> con l'input <pType> ---> questo
-             * controllo serve in caso i piu' <Street> come risultato.
+             * controllo serve in caso di piu' <Street> come risultato.
              * In caso di esito positivo, vengono mappati i valori trovati e fatto il break
              * del ciclo.
              */
@@ -71,9 +73,12 @@ public class ServiceStreetCode {
 
                 for (TopoServiceTypeGetVieFTopoStreet street : listValueStreet) {
 
-                    if (street.getTopoVia().getValue().equalsIgnoreCase("via")) {
+                    if (street.getTopoVia().getValue().equalsIgnoreCase(pType)) {
                         resultValueStreet.put("streetcode", street.getStreetCode());
                         resultValueStreet.put("statuscode", street.getStateCode());
+                        System.out.println(method + "Street Code = " + resultValueStreet.get("streetcode")
+                                + " / Status Code = " + resultValueStreet
+                                        .get("statuscode"));
                         break;
                     }
 

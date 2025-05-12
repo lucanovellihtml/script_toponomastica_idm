@@ -19,6 +19,8 @@ public class ServiceTypeVia {
 
     public String getServiceTypeVia(String pType) {
 
+        String method = "[getServiceTypeVia]::";
+
         String resultCodeVie = null;
 
         try {
@@ -65,8 +67,10 @@ public class ServiceTypeVia {
             if (!listTypeAddress.isEmpty()) {
 
                 for (TopoServiceTypeGetCivicoTipoViaType elementVia : listTypeAddress) {
-                    if (elementVia.getDescriptionExtended().getValue().equalsIgnoreCase("via"))
+                    if (elementVia.getDescriptionExtended().getValue().equalsIgnoreCase(pType)) {
                         resultCodeVie = elementVia.getCode().getValue();
+                        System.out.println(method + "Code Address = " + resultCodeVie);
+                    }
                 }
             }
 
