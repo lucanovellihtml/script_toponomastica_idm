@@ -16,11 +16,12 @@ import jakarta.xml.ws.handler.MessageContext;
 
 public class ServiceCivicCode {
 
-    public Integer getServiceCivicCode(Integer streetCodeValue, String streetNumberCivic, Integer streetStatusCode) {
+    public Map<String, String> getServiceCivicCode(Integer streetCodeValue, String streetNumberCivic,
+            Integer streetStatusCode) {
 
         String method = "[getServiceCivicCode]::";
 
-        Integer resultCodeIdc = null;
+        Map<String, String> resultValueCivicCode = new HashMap<>();
 
         try {
 
@@ -64,14 +65,16 @@ public class ServiceCivicCode {
 
             /*
              * Controlliamo se la lista sia vuota.
-             * In caso di lista valorizzata, salviamo il valore <IDC>.
+             * In caso di lista valorizzata, salviamo il valore <IDC> e <Toponym>.
              * In caso di esito positivo, vengono mappati i valori trovati.
              */
             if (!listValueCivic.isEmpty()) {
 
                 for (TopoServiceTypeGetViaFCodeCivic civicCode : listValueCivic) {
-                    System.out.println(method + "CivicCode = " + civicCode.getIDC());
-                    resultCodeIdc = civicCode.getIDC();
+                    resultValueCivicCode.put("idc", String.valueOf(civicCode.getIDC()));
+                    resultValueCivicCode.put("toponym", civicCode.getToponym().getValue());
+                    System.out.println(method + "Idc = " + resultValueCivicCode.get("idc") + " / Toponym = "
+                            + resultValueCivicCode.get("toponym"));
                 }
             }
 
@@ -79,7 +82,7 @@ public class ServiceCivicCode {
             System.err.println(e);
         }
 
-        return resultCodeIdc;
+        return resultValueCivicCode;
 
     }
 
