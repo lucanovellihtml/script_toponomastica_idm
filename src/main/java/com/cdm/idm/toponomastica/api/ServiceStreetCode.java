@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.datacontract.schemas._2004._07.wcftopo.ArrayOfTopoServiceTypeGetVieFTopoStreet;
 import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetVieFTopoStreet;
+import org.identityconnectors.common.logging.Log;
 import org.tempuri.Toponomastica45;
 import org.tempuri.Toponomastica45PortType;
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
@@ -15,6 +16,9 @@ import jakarta.xml.ws.BindingProvider;
 import jakarta.xml.ws.handler.MessageContext;
 
 public class ServiceStreetCode {
+
+    // Log
+    private static final Log log = Log.getLog(ServiceStreetCode.class);
 
     public Map<String, Integer> getServiceStreetCode(String pToponomy, String pType) {
 
@@ -76,7 +80,7 @@ public class ServiceStreetCode {
                     if (street.getTopoVia().getValue().equalsIgnoreCase(pType)) {
                         resultValueStreet.put("streetcode", street.getStreetCode());
                         resultValueStreet.put("statuscode", street.getStateCode());
-                        System.out.println(method + "Street Code = " + resultValueStreet.get("streetcode")
+                        log.info(method + "Street Code = " + resultValueStreet.get("streetcode")
                                 + " / Status Code = " + resultValueStreet
                                         .get("statuscode"));
                         break;
@@ -87,7 +91,7 @@ public class ServiceStreetCode {
             }
 
         } catch (Exception e) {
-            System.err.println(e);
+            log.error(method + e.getMessage());
         }
 
         return resultValueStreet;

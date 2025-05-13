@@ -7,14 +7,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.identityconnectors.common.logging.Log;
 import com.cdm.idm.toponomastica.user.User;
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
 
 public class DbResidenceCheck {
 
+    // Log
+    private static final Log log = Log.getLog(DbResidenceCheck.class);
+
     public List<User> getUserDomiciledMilan() {
 
-        String method = "[DbResidenceCheck]::";
+        String method = "[getUserDomiciledMilan]::";
 
         // Lista user del risultato della query
         List<User> listUserQuery = new ArrayList<>();
@@ -34,7 +38,7 @@ public class DbResidenceCheck {
                 // 3. Creare un oggetto Statement
                 statement = connection.createStatement();
 
-                System.out.println(method + "Esecuzione della query...");
+                log.info(method + "Esecuzione della query...");
 
                 // 4. Eseguire una query di test
                 resultSet = statement.executeQuery(ConstantToponomastica.QUERY_ANAGRAFICA);
@@ -47,11 +51,10 @@ public class DbResidenceCheck {
                     listUserQuery.add(user);
                 }
 
-                System.out.println(method + "Query eseguita correttamente.");
+                log.info(method + "Query eseguita correttamente.");
 
             } catch (SQLException e) {
-                System.err.println(method + "Errore durante la connessione o l'esecuzione della query SQL:");
-                e.printStackTrace();
+                log.error(method + "Errore durante la connessione o l'esecuzione della query SQL: " + e.getMessage());
 
             } finally {
 
@@ -70,8 +73,7 @@ public class DbResidenceCheck {
                     dbManagement.closeConnection(connection);
 
                 } catch (SQLException e) {
-                    System.err.println(method + "Errore durante la chiusura della connessione:");
-                    e.printStackTrace();
+                    log.error(method + "Errore durante la chiusura della connessione:" + e.getMessage());
                 }
 
             }

@@ -10,9 +10,16 @@ import com.cdm.idm.toponomastica.api.ServiceStreetCode;
 import com.cdm.idm.toponomastica.api.ServiceTypeVia;
 import com.cdm.idm.toponomastica.database.DbResidenceCheck;
 import com.cdm.idm.toponomastica.user.User;
+import org.identityconnectors.common.logging.Log;
 
 public class AddressValidated {
+
+    // Log
+    private static final Log log = Log.getLog(AddressValidated.class);
+
     public static void main(String[] args) {
+
+        String method = "[AddressValidate]::";
 
         /*
          * L'oggetto dbResidenceCheck gestisce l'apertura della connessione al database
@@ -23,7 +30,7 @@ public class AddressValidated {
         DbResidenceCheck dbResidenceCheck = new DbResidenceCheck();
         List<User> listRecordQuery = dbResidenceCheck.getUserDomiciledMilan();
 
-        System.out.println("Records query restituiti = " + listRecordQuery.size());
+        log.info(method + "Records query restituiti = " + listRecordQuery.size());
 
         /*
          * Viene ciclato ogni singolo oggetto User della lista.
@@ -51,7 +58,7 @@ public class AddressValidated {
             for (int i = 0; i < split.length; i++) {
 
                 if (StringUtils.isNumeric(split[i])) {
-                    System.out.println(singleUser.toString());
+                    log.info(method + singleUser.toString());
                     pCivic = split[i];
                     pType = split[0];
                     pToponomy = singleUser.getResidenceAddress().replace(split[0], "").replace(pCivic, "")
@@ -66,7 +73,7 @@ public class AddressValidated {
                     ServiceTypeVia serviceTypeVia = new ServiceTypeVia();
                     String codeValue = serviceTypeVia.getServiceTypeVia(pType);
                     if (StringUtils.isNotBlank(codeValue)) {
-                        System.out.println("Odonimo valido, CODE = " + codeValue);
+                        log.info(method + "Odonimo valido, CODE = " + codeValue);
 
                         /*
                          * Api sitGetVieFTopo.
@@ -79,7 +86,7 @@ public class AddressValidated {
                         if (!mapValueStreet.isEmpty()) {
                             Integer streetCode = mapValueStreet.get("streetcode");
                             Integer statusCode = mapValueStreet.get("statuscode");
-                            System.out.println("Strada valida, STREETCODE = " + streetCode);
+                            log.info(method + "Strada valida, STREETCODE = " + streetCode);
 
                             /*
                              * Api sitGetViaFCode.
@@ -94,22 +101,22 @@ public class AddressValidated {
                             if (!mapValueCivic.isEmpty()) {
                                 String toponym = mapValueCivic.get("toponym");
                                 Integer idc = Integer.parseInt(mapValueCivic.get("idc"));
-                                System.out.println("Strada con civico valida, IDC = " + idc);
+                                log.info(method + "Strada con civico valida, IDC = " + idc);
                                 singleUser.setIdc(idc);
                                 singleUser.setResidenceAddressNew(toponym);
                                 singleUser.setStreetCode(streetCode);
                                 singleUser.setTypeViaCode(codeValue);
                                 singleUser.setUpdateFlag(true);
-                                System.out.println("Parametri dell'utente aggiornati...");
-                                System.out.println(singleUser.toString() + "\n");
+                                log.info(method + "Parametri dell'utente aggiornati...");
+                                log.info(method + singleUser.toString() + "\n");
                             } else {
-                                System.err.println("[sitGetViaFCode]::Strada con civico non valida...\n");
+                                log.error(method + "APi sitGetViaFCode::Strada con civico non valida...\n");
                             }
                         } else {
-                            System.err.println("[sitGetVieFTopo]::Strada non valida...\n");
+                            log.error(method + "Api sitGetVieFTopo::Strada non valida...\n");
                         }
                     } else {
-                        System.err.println("[sitGetTipoVia]::Odonimo non valido...\n");
+                        log.error(method + "Api sitGetTipoVia::Odonimo non valido...\n");
                     }
                     break;
                 }

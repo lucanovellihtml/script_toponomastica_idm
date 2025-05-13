@@ -7,6 +7,7 @@ import java.util.Map;
 import org.datacontract.schemas._2004._07.wcftopo.ArrayOfTopoServiceTypeGetCivicoTipoViaType;
 import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetCivicoTipoViaType;
 import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetTipoVia;
+import org.identityconnectors.common.logging.Log;
 import org.tempuri.Toponomastica45;
 import org.tempuri.Toponomastica45PortType;
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
@@ -16,6 +17,9 @@ import jakarta.xml.ws.BindingProvider;
 import jakarta.xml.ws.handler.MessageContext;
 
 public class ServiceTypeVia {
+
+    // Log
+    private static final Log log = Log.getLog(ServiceTypeVia.class);
 
     public String getServiceTypeVia(String pType) {
 
@@ -69,13 +73,13 @@ public class ServiceTypeVia {
                 for (TopoServiceTypeGetCivicoTipoViaType elementVia : listTypeAddress) {
                     if (elementVia.getDescriptionExtended().getValue().equalsIgnoreCase(pType)) {
                         resultCodeVie = elementVia.getCode().getValue();
-                        System.out.println(method + "Code Address = " + resultCodeVie);
+                        log.info(method + "Code Address = " + resultCodeVie);
                     }
                 }
             }
 
         } catch (Exception e) {
-            System.err.println(e);
+            log.error(method + e.getMessage());
         }
 
         return resultCodeVie;

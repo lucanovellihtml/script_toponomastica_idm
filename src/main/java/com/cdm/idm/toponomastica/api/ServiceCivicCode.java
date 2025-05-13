@@ -7,6 +7,7 @@ import java.util.Map;
 import org.datacontract.schemas._2004._07.wcftopo.ArrayOfTopoServiceTypeGetViaFCodeCivic;
 import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetViaFCode;
 import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetViaFCodeCivic;
+import org.identityconnectors.common.logging.Log;
 import org.tempuri.Toponomastica45;
 import org.tempuri.Toponomastica45PortType;
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
@@ -15,6 +16,9 @@ import jakarta.xml.ws.BindingProvider;
 import jakarta.xml.ws.handler.MessageContext;
 
 public class ServiceCivicCode {
+
+    // Log
+    private static final Log log = Log.getLog(ServiceCivicCode.class);
 
     public Map<String, String> getServiceCivicCode(Integer streetCodeValue, String streetNumberCivic,
             Integer streetStatusCode) {
@@ -73,13 +77,13 @@ public class ServiceCivicCode {
                 for (TopoServiceTypeGetViaFCodeCivic civicCode : listValueCivic) {
                     resultValueCivicCode.put("idc", String.valueOf(civicCode.getIDC()));
                     resultValueCivicCode.put("toponym", civicCode.getToponym().getValue());
-                    System.out.println(method + "Idc = " + resultValueCivicCode.get("idc") + " / Toponym = "
+                    log.info(method + "Idc = " + resultValueCivicCode.get("idc") + " / Toponym = "
                             + resultValueCivicCode.get("toponym"));
                 }
             }
 
         } catch (Exception e) {
-            System.err.println(e);
+            log.error(method + e.getMessage());
         }
 
         return resultValueCivicCode;

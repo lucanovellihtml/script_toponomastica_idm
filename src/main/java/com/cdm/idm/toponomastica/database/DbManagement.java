@@ -4,9 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import org.identityconnectors.common.logging.Log;
+
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
 
 public class DbManagement {
+
+    // Log
+    private static final Log log = Log.getLog(DbManagement.class);
 
     private String ip, user, password, port, nameDb;
 
@@ -47,17 +52,16 @@ public class DbManagement {
             Class.forName("org.postgresql.Driver");
 
             // 2. Stabilire la connessione al database
-            System.out.println(method + "Tentativo di connessione al database...");
+            log.info(method + "Tentativo di connessione al database...");
             connection = DriverManager.getConnection(getUrl(), this.user, this.password);
-            System.out.println(method + "Connessione al database stabilita con successo!");
+            log.info(method + "Connessione al database stabilita con successo!");
 
         } catch (ClassNotFoundException e) {
-            System.err.println(method + "Errore: Driver JDBC per PostgreSQL non trovato!");
+            log.error(method + "Errore: Driver JDBC per PostgreSQL non trovato!");
             e.printStackTrace();
 
         } catch (SQLException e) {
-            System.err.println(method + "Errore durante la connessione o l'esecuzione della query SQL:");
-            e.printStackTrace();
+            log.error(method + "Errore durante la connessione o l'esecuzione della query SQL:" + e.getMessage());
         }
 
         return connection;
@@ -76,11 +80,10 @@ public class DbManagement {
         try {
             if (connection != null && !connection.isClosed()) {
                 connection.close();
-                System.out.println(method + "Connessione al database chiusa.");
+                log.info(method + "Connessione al database chiusa.");
             }
         } catch (SQLException e) {
-            System.err.println(method + "Errore durante la chiusura della connessione:");
-            e.printStackTrace();
+            log.error(method + "Errore durante la chiusura della connessione:" + e.getMessage());
         }
 
     }
