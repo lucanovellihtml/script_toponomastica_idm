@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://tempuri.org/"
+  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+  xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns0="http://schemas.microsoft.com/2003/10/Serialization/"
+  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+  xmlns:ns2="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+  xmlns:ns1="http://schemas.datacontract.org/2004/07/WcfTopo"
+  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+  xmlns:tns="http://tempuri.org/"
+  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+  xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+  xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+  xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfTopo"/>
+      <xsd:element name="sitGetData">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pRiferimento" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetDataResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetDataResult" nillable="true" type="ns1:TopoService.typeGetData"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetInfoResult" nillable="true" type="ns1:TopoService.typeGetInfo"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCiviciFPointBase">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pCoordinateX" type="xsd:double"/>
+            <xsd:element minOccurs="0" name="pCoordinateY" type="xsd:double"/>
+            <xsd:element minOccurs="0" name="pReference" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pState" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pNumber" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pDistance" type="xsd:double"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCiviciFPointBaseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetCiviciFPointBaseResult" nillable="true" type="ns1:TopoService.typeGetCiviciFPointBase"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCiviciFPointExtended">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pCoordinateX" type="xsd:double"/>
+            <xsd:element minOccurs="0" name="pCoordinateY" type="xsd:double"/>
+            <xsd:element minOccurs="0" name="pReference" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pState" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pNumber" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pDistance" type="xsd:double"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCiviciFPointExtendedResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetCiviciFPointExtendedResult" nillable="true" type="ns1:TopoService.typeGetCiviciFPointExtended"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetVieFTopo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pToponomy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pType" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetVieFTopoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetVieFTopoResult" nillable="true" type="ns1:TopoService.typeGetVieFTopo"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetViaFCode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pStreetCode" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pCivic" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pState" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pReference" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetViaFCodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetViaFCodeResult" nillable="true" type="ns1:TopoService.typeGetViaFCode"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetViaFCodeExtended">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pStreetCode" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pCivic" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pState" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pReference" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetViaFCodeExtendedResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetViaFCodeExtendedResult" nillable="true" type="ns1:TopoService.typeGetViaFCodeExtended"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCivicoFidc">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pIDC" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pReference" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCivicoFidcResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetCivicoFidcResult" nillable="true" type="ns1:TopoService.typeGetCivicoFidc"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCivicoStory">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pIDC" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="pData1" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pData2" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCivicoStoryResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetCivicoStoryResult" nillable="true" type="ns1:TopoService.typeGetCivicoStory"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCivicoChange">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pData1" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pData2" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCivicoChangeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetCivicoChangeResult" nillable="true" type="ns1:TopoService.typeGetCivicoChange"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetTipoVia">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pType" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetTipoViaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetTipoViaResult" nillable="true" type="ns1:TopoService.typeGetTipoVia"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetValueFPoint">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pCoordinateX" type="xsd:double"/>
+            <xsd:element minOccurs="0" name="pCoordinateY" type="xsd:double"/>
+            <xsd:element minOccurs="0" name="pReference" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetValueFPointResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetValueFPointResult" nillable="true" type="ns1:TopoService.typeGetValue"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetValueFidc">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pIDC" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetValueFidcResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetValueFidcResult" nillable="true" type="ns1:TopoService.typeGetValue"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetValueFPolygon">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pPolygonJson" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pReference" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetValueFPolygonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetValueFPolygonResult" nillable="true" type="ns1:TopoService.typeGetValue"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCivicoReplace">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="pToken" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pIDC" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitGetCivicoReplaceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="sitGetCivicoReplaceResult" nillable="true" type="ns1:TopoService.typeGetCivicoReplace"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/"
+      xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="anyType" nillable="true" type="xsd:anyType"/>
+      <xsd:element name="anyURI" nillable="true" type="xsd:anyURI"/>
+      <xsd:element name="base64Binary" nillable="true" type="xsd:base64Binary"/>
+      <xsd:element name="boolean" nillable="true" type="xsd:boolean"/>
+      <xsd:element name="byte" nillable="true" type="xsd:byte"/>
+      <xsd:element name="dateTime" nillable="true" type="xsd:dateTime"/>
+      <xsd:element name="decimal" nillable="true" type="xsd:decimal"/>
+      <xsd:element name="double" nillable="true" type="xsd:double"/>
+      <xsd:element name="float" nillable="true" type="xsd:float"/>
+      <xsd:element name="int" nillable="true" type="xsd:int"/>
+      <xsd:element name="long" nillable="true" type="xsd:long"/>
+      <xsd:element name="QName" nillable="true" type="xsd:QName"/>
+      <xsd:element name="short" nillable="true" type="xsd:short"/>
+      <xsd:element name="string" nillable="true" type="xsd:string"/>
+      <xsd:element name="unsignedByte" nillable="true" type="xsd:unsignedByte"/>
+      <xsd:element name="unsignedInt" nillable="true" type="xsd:unsignedInt"/>
+      <xsd:element name="unsignedLong" nillable="true" type="xsd:unsignedLong"/>
+      <xsd:element name="unsignedShort" nillable="true" type="xsd:unsignedShort"/>
+      <xsd:element name="char" nillable="true" type="ns0:char"/>
+      <xsd:simpleType name="char">
+        <xsd:restriction base="xsd:int"/>
+      </xsd:simpleType>
+      <xsd:element name="duration" nillable="true" type="ns0:duration"/>
+      <xsd:simpleType name="duration">
+        <xsd:restriction base="xsd:duration">
+          <xsd:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xsd:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xsd:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:element name="guid" nillable="true" type="ns0:guid"/>
+      <xsd:simpleType name="guid">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:attribute name="FactoryType" type="xsd:QName"/>
+      <xsd:attribute name="Id" type="xsd:ID"/>
+      <xsd:attribute name="Ref" type="xsd:IDREF"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfTopo"
+      xmlns:tns="http://schemas.datacontract.org/2004/07/WcfTopo"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:complexType name="TopoService.typeGetData">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+          <xsd:element minOccurs="0" name="Riferimento" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="datajson" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetData" nillable="true" type="ns1:TopoService.typeGetData"/>
+      <xsd:complexType name="TopoService.typeError">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Code" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Message" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeError" nillable="true" type="ns1:TopoService.typeError"/>
+      <xsd:complexType name="TopoService.typeGetInfo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+          <xsd:element minOccurs="0" name="Revision" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetInfo" nillable="true" type="ns1:TopoService.typeGetInfo"/>
+      <xsd:complexType name="TopoService.typeGetCiviciFPointBase">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CivicFPointBase"/>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCiviciFPointBase" nillable="true" type="ns1:TopoService.typeGetCiviciFPointBase"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetCiviciFPointBaseCivic">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetCiviciFPointBaseCivic" nillable="true" type="ns1:TopoService.typeGetCiviciFPointBaseCivic"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typeGetCiviciFPointBaseCivic" nillable="true" type="ns1:ArrayOfTopoService.typeGetCiviciFPointBaseCivic"/>
+      <xsd:complexType name="TopoService.typeGetCiviciFPointBaseCivic">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Complete" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="CoordinateX" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="CoordinateY" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="Distance" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="IDC" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StreetCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Toponym" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCiviciFPointBaseCivic" nillable="true" type="ns1:TopoService.typeGetCiviciFPointBaseCivic"/>
+      <xsd:complexType name="TopoService.typeGetCiviciFPointExtended">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CivicFPointExtended"/>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCiviciFPointExtended" nillable="true" type="ns1:TopoService.typeGetCiviciFPointExtended"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetCiviciFPointExtendedCivic">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetCiviciFPointExtendedCivic" nillable="true" type="ns1:TopoService.typeGetCiviciFPointExtendedCivic"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typeGetCiviciFPointExtendedCivic" nillable="true" type="ns1:ArrayOfTopoService.typeGetCiviciFPointExtendedCivic"/>
+      <xsd:complexType name="TopoService.typeGetCiviciFPointExtendedCivic">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Bar" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Bar2" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="CAP" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Character" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Complete" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="CoordinateX" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="CoordinateY" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="DateDown" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="DateUp" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Distance" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="IDC" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Number" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Replace" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Residential" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StateCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StateDescription" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="StreetCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Topo1" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo2" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo3" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo4" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo5" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="TopoVia" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Toponym" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="URL" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ZDN" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCiviciFPointExtendedCivic" nillable="true" type="ns1:TopoService.typeGetCiviciFPointExtendedCivic"/>
+      <xsd:complexType name="TopoService.typeGetVieFTopo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+          <xsd:element minOccurs="0" name="Street" nillable="true" type="ns1:ArrayOfTopoService.typeGetVieFTopoStreet"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetVieFTopo" nillable="true" type="ns1:TopoService.typeGetVieFTopo"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetVieFTopoStreet">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetVieFTopoStreet" nillable="true" type="ns1:TopoService.typeGetVieFTopoStreet"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!-- modifica -->
+      <xsd:element name="StreetSecond" nillable="true" type="ns1:ArrayOfTopoService.typeGetVieFTopoStreet"/>
+      <xsd:complexType name="TopoService.typeGetVieFTopoStreet">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="StateCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StreetCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Topo1" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo2" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo3" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo4" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo5" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="TopoVia" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Toponym" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!-- modifica -->
+      <xsd:element name="StreetTopo" nillable="true" type="ns1:TopoService.typeGetVieFTopoStreet"/>
+      <xsd:complexType name="TopoService.typeGetViaFCode">
+        <xsd:sequence>
+          <!-- modifica per ripristinare il tipo per ottenere l'array del campo Civic, modificato anche il nome per ripristinare il collegamentro tra le classi -->
+          <xsd:element minOccurs="0" name="Civic" nillable="true" type="ns1:ArrayOfTopoService.typeGetViaFCodeCivic"/>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+          <xsd:element minOccurs="0" name="StateCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StreetCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Topo1" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo2" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo3" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo4" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo5" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="TopoVia" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Toponym" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetViaFCode" nillable="true" type="ns1:TopoService.typeGetViaFCode"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetViaFCodeCivic">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetViaFCodeCivic" nillable="true" type="ns1:TopoService.typeGetViaFCodeCivic"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typeGetViaFCodeCivic" nillable="true" type="ns1:ArrayOfTopoService.typeGetViaFCodeCivic"/>
+      <xsd:complexType name="TopoService.typeGetViaFCodeCivic">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CoordinateX" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="CoordinateY" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="IDC" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StateCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Toponym" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ViaFCodeCivic" nillable="true" type="ns1:TopoService.typeGetViaFCodeCivic"/>
+      <xsd:complexType name="TopoService.typeGetViaFCodeExtended">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Civic" nillable="true" type="ns1:ArrayOfTopoService.typeGetViaFCodeCivicExtended"/>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+          <xsd:element minOccurs="0" name="StateCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StreetCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Topo1" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo2" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo3" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo4" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo5" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="TopoVia" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Toponym" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetViaFCodeExtended" nillable="true" type="ns1:TopoService.typeGetViaFCodeExtended"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetViaFCodeCivicExtended">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetViaFCodeCivicExtended" nillable="true" type="ns1:TopoService.typeGetViaFCodeCivicExtended"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typeGetViaFCodeCivicExtended" nillable="true" type="ns1:ArrayOfTopoService.typeGetViaFCodeCivicExtended"/>
+      <xsd:complexType name="TopoService.typeGetViaFCodeCivicExtended">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Bar" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Bar2" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Character" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Complete" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="CoordinateX" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="CoordinateY" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="DateDown" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="DateUp" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="IDC" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Number" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Residential" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StateCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StateDescription" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Toponym" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetViaFCodeCivicExtended" nillable="true" type="ns1:TopoService.typeGetViaFCodeCivicExtended"/>
+      <xsd:complexType name="TopoService.typeGetCivicoFidc">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Bar" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Bar2" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="CAP" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Character" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Complete" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="CoordinateX" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="CoordinateY" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="DateDown" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="DateUp" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+          <xsd:element minOccurs="0" name="IDC" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Number" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Permessi" nillable="true" type="ns1:ArrayOfTopoService.typePermessi"/>
+          <xsd:element minOccurs="0" name="Replace" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Residential" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StateCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="StateDescription" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="StreetCode" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="Topo1" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo2" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo3" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo4" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Topo5" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="TopoVia" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Toponym" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="URL" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ZDN" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCivicoFidc" nillable="true" type="ns1:TopoService.typeGetCivicoFidc"/>
+      <xsd:complexType name="ArrayOfTopoService.typePermessi">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typePermessi" nillable="true" type="ns1:TopoService.typePermessi"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typePermessi" nillable="true" type="ns1:ArrayOfTopoService.typePermessi"/>
+      <xsd:complexType name="TopoService.typePermessi">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="area_id" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="geom" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="id_via" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="nome_area" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="note_rel" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="numero" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ordinanza" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="tipo_area" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="tipo_rel" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="val_fine" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="val_inizio" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typePermessi" nillable="true" type="ns1:TopoService.typePermessi"/>
+      <xsd:complexType name="TopoService.typeGetCivicoStory">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CivicStory"/>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCivicoStory" nillable="true" type="ns1:TopoService.typeGetCivicoStory"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetCivicoStoryCivic">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetCivicoStoryCivic" nillable="true" type="ns1:TopoService.typeGetCivicoStoryCivic"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typeGetCivicoStoryCivic" nillable="true" type="ns1:ArrayOfTopoService.typeGetCivicoStoryCivic"/>
+      <xsd:complexType name="TopoService.typeGetCivicoStoryCivic">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="DateDown" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="DateUp" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="IDC" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCivicoStoryCivic" nillable="true" type="ns1:TopoService.typeGetCivicoStoryCivic"/>
+      <xsd:complexType name="TopoService.typeGetCivicoChange">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CivicChange"/>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCivicoChange" nillable="true" type="ns1:TopoService.typeGetCivicoChange"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetCivicoChangeCivic">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetCivicoChangeCivic" nillable="true" type="ns1:TopoService.typeGetCivicoChangeCivic"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typeGetCivicoChangeCivic" nillable="true" type="ns1:ArrayOfTopoService.typeGetCivicoChangeCivic"/>
+      <xsd:complexType name="TopoService.typeGetCivicoChangeCivic">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="DateDown" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="DateUp" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="IDC" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCivicoChangeCivic" nillable="true" type="ns1:TopoService.typeGetCivicoChangeCivic"/>
+      <xsd:complexType name="TopoService.typeGetTipoVia">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+          <xsd:element minOccurs="0" name="Type" nillable="true" type="ns1:ArrayOfTopoService.typeGetCivicoTipoViaType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetTipoVia" nillable="true" type="ns1:TopoService.typeGetTipoVia"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetCivicoTipoViaType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetCivicoTipoViaType" nillable="true" type="ns1:TopoService.typeGetCivicoTipoViaType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typeGetCivicoTipoViaType" nillable="true" type="ns1:ArrayOfTopoService.typeGetCivicoTipoViaType"/>
+      <xsd:complexType name="TopoService.typeGetCivicoTipoViaType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Code" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="DescriptioShort" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="DescriptionExtended" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCivicoTipoViaType" nillable="true" type="ns1:TopoService.typeGetCivicoTipoViaType"/>
+      <xsd:complexType name="TopoService.typeGetValue">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+          <xsd:element minOccurs="0" name="Values" nillable="true" type="ns1:ArrayOfTopoService.typeGetValueAttributes"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetValue" nillable="true" type="ns1:TopoService.typeGetValue"/>
+      <xsd:complexType name="ArrayOfTopoService.typeGetValueAttributes">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TopoService.typeGetValueAttributes" nillable="true" type="ns1:TopoService.typeGetValueAttributes"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfTopoService.typeGetValueAttributes" nillable="true" type="ns1:ArrayOfTopoService.typeGetValueAttributes"/>
+      <xsd:complexType name="TopoService.typeGetValueAttributes">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Value" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetValueAttributes" nillable="true" type="ns1:TopoService.typeGetValueAttributes"/>
+      <xsd:complexType name="TopoService.typeGetCivicoReplace">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Civic" nillable="true" type="ns2:ArrayOfint"/>
+          <xsd:element minOccurs="0" name="Err" nillable="true" type="ns1:TopoService.typeError"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TopoService.typeGetCivicoReplace" nillable="true" type="ns1:TopoService.typeGetCivicoReplace"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+      xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="ArrayOfint">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="int" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfint" nillable="true" type="ns2:ArrayOfint"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITopoService_sitGetViaFCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetViaFCode">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetValueFPolygon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetValueFPolygonResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCiviciFPointBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCiviciFPointBase">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCivicoChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCivicoChangeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetViaFCodeExtended_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetViaFCodeExtended">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCivicoFidc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCivicoFidcResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCiviciFPointExtended_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCiviciFPointExtended">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetValueFPoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetValueFPoint">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetViaFCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetViaFCodeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCivicoStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCivicoStory">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCivicoStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCivicoStoryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetData">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetDataResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetVieFTopo_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetVieFTopo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCivicoChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCivicoChange">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetViaFCodeExtended_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetViaFCodeExtendedResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetTipoVia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetTipoViaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetValueFidc_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetValueFidc">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetValueFidc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetValueFidcResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetTipoVia_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetTipoVia">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCivicoReplace_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCivicoReplace">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCiviciFPointExtended_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCiviciFPointExtendedResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCivicoReplace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCivicoReplaceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetValueFPolygon_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetValueFPolygon">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCiviciFPointBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCiviciFPointBaseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetVieFTopo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetVieFTopoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetCivicoFidc_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetCivicoFidc">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ITopoService_sitGetValueFPoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitGetValueFPointResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Toponomastica4.5PortType">
+    <wsdl:operation name="sitGetVieFTopo">
+      <wsdl:input message="tns:ITopoService_sitGetVieFTopo_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetVieFTopo">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetVieFTopo_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetVieFTopoResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetInfo">
+      <wsdl:input message="tns:ITopoService_sitGetInfo_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetInfo">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetInfo_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetInfoResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFPoint">
+      <wsdl:input message="tns:ITopoService_sitGetValueFPoint_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetValueFPoint">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetValueFPoint_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetValueFPointResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetTipoVia">
+      <wsdl:input message="tns:ITopoService_sitGetTipoVia_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetTipoVia">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetTipoVia_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetTipoViaResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFPolygon">
+      <wsdl:input message="tns:ITopoService_sitGetValueFPolygon_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetValueFPolygon">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetValueFPolygon_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetValueFPolygonResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoFidc">
+      <wsdl:input message="tns:ITopoService_sitGetCivicoFidc_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCivicoFidc">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetCivicoFidc_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCivicoFidcResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCiviciFPointBase">
+      <wsdl:input message="tns:ITopoService_sitGetCiviciFPointBase_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCiviciFPointBase">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetCiviciFPointBase_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCiviciFPointBaseResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetViaFCode">
+      <wsdl:input message="tns:ITopoService_sitGetViaFCode_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetViaFCode">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetViaFCode_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetViaFCodeResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoStory">
+      <wsdl:input message="tns:ITopoService_sitGetCivicoStory_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCivicoStory">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetCivicoStory_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCivicoStoryResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetViaFCodeExtended">
+      <wsdl:input message="tns:ITopoService_sitGetViaFCodeExtended_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetViaFCodeExtended">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetViaFCodeExtended_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetViaFCodeExtendedResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoReplace">
+      <wsdl:input message="tns:ITopoService_sitGetCivicoReplace_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCivicoReplace">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetCivicoReplace_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCivicoReplaceResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoChange">
+      <wsdl:input message="tns:ITopoService_sitGetCivicoChange_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCivicoChange">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetCivicoChange_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCivicoChangeResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCiviciFPointExtended">
+      <wsdl:input message="tns:ITopoService_sitGetCiviciFPointExtended_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCiviciFPointExtended">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetCiviciFPointExtended_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetCiviciFPointExtendedResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFidc">
+      <wsdl:input message="tns:ITopoService_sitGetValueFidc_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetValueFidc">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetValueFidc_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetValueFidcResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetData">
+      <wsdl:input message="tns:ITopoService_sitGetData_InputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetData">
+      </wsdl:input>
+      <wsdl:output message="tns:ITopoService_sitGetData_OutputMessage" wsaw:Action="http://tempuri.org/ITopoService/sitGetDataResponse">
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Toponomastica4.5Soap11Binding" type="tns:Toponomastica4.5PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sitGetVieFTopo">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetVieFTopo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetInfo">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFPoint">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetValueFPoint" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetTipoVia">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetTipoVia" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFPolygon">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetValueFPolygon" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoFidc">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetCivicoFidc" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCiviciFPointBase">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetCiviciFPointBase" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetViaFCode">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetViaFCode" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoStory">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetCivicoStory" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetViaFCodeExtended">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetViaFCodeExtended" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoReplace">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetCivicoReplace" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoChange">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetCivicoChange" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCiviciFPointExtended">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetCiviciFPointExtended" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFidc">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetValueFidc" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetData">
+      <soap:operation soapAction="http://tempuri.org/ITopoService/sitGetData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Toponomastica4.5Soap12Binding" type="tns:Toponomastica4.5PortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sitGetVieFTopo">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetVieFTopo" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetInfo">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetInfo" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFPoint">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetValueFPoint" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetTipoVia">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetTipoVia" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFPolygon">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetValueFPolygon" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoFidc">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetCivicoFidc" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCiviciFPointBase">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetCiviciFPointBase" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetViaFCode">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetViaFCode" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoStory">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetCivicoStory" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetViaFCodeExtended">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetViaFCodeExtended" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoReplace">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetCivicoReplace" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoChange">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetCivicoChange" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCiviciFPointExtended">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetCiviciFPointExtended" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFidc">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetValueFidc" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetData">
+      <soap12:operation soapAction="http://tempuri.org/ITopoService/sitGetData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Toponomastica4.5HttpBinding" type="tns:Toponomastica4.5PortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="sitGetVieFTopo">
+      <http:operation location="sitGetVieFTopo"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetInfo">
+      <http:operation location="sitGetInfo"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFPoint">
+      <http:operation location="sitGetValueFPoint"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetTipoVia">
+      <http:operation location="sitGetTipoVia"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFPolygon">
+      <http:operation location="sitGetValueFPolygon"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoFidc">
+      <http:operation location="sitGetCivicoFidc"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCiviciFPointBase">
+      <http:operation location="sitGetCiviciFPointBase"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetViaFCode">
+      <http:operation location="sitGetViaFCode"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoStory">
+      <http:operation location="sitGetCivicoStory"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetViaFCodeExtended">
+      <http:operation location="sitGetViaFCodeExtended"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoReplace">
+      <http:operation location="sitGetCivicoReplace"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCivicoChange">
+      <http:operation location="sitGetCivicoChange"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetCiviciFPointExtended">
+      <http:operation location="sitGetCiviciFPointExtended"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetValueFidc">
+      <http:operation location="sitGetValueFidc"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sitGetData">
+      <http:operation location="sitGetData"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Toponomastica4.5">
+    <wsdl:port name="Toponomastica4.5HttpsEndpoint" binding="tns:Toponomastica4.5HttpBinding">
+      <http:address location="https://api.comune.milano.it:443/Toponomastica/4.5"/>
+    </wsdl:port>
+    <wsdl:port name="Toponomastica4.5HttpsSoap11Endpoint" binding="tns:Toponomastica4.5Soap11Binding">
+      <soap:address location="https://api.comune.milano.it:443/Toponomastica/4.5"/>
+    </wsdl:port>
+    <wsdl:port name="Toponomastica4.5HttpsSoap12Endpoint" binding="tns:Toponomastica4.5Soap12Binding">
+      <soap12:address location="https://api.comune.milano.it:443/Toponomastica/4.5"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
