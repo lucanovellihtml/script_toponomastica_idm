@@ -1,25 +1,29 @@
 
 package org.datacontract.schemas._2004._07.wcftopo;
 
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlType;
-
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>Classe Java per TopoService.typeError complex type.
+ * <p>
+ * Classe Java per TopoService.typeError complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType name="TopoService.typeError">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Code" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Code" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Message" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -30,8 +34,8 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TopoService.typeError", propOrder = {
-    "code",
-    "message"
+        "code",
+        "message"
 })
 public class TopoServiceTypeError {
 
@@ -41,48 +45,48 @@ public class TopoServiceTypeError {
     protected JAXBElement<String> message;
 
     /**
-     * Recupera il valore della proprietà code.
+     * Recupera il valore della proprietï¿½ code.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getCode() {
         return code;
     }
 
     /**
-     * Imposta il valore della proprietà code.
+     * Imposta il valore della proprietï¿½ code.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setCode(JAXBElement<String> value) {
         this.code = value;
     }
 
     /**
-     * Recupera il valore della proprietà message.
+     * Recupera il valore della proprietï¿½ message.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getMessage() {
         return message;
     }
 
     /**
-     * Imposta il valore della proprietà message.
+     * Imposta il valore della proprietï¿½ message.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setMessage(JAXBElement<String> value) {
         this.message = value;

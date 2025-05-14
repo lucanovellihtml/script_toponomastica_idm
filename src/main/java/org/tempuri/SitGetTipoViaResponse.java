@@ -1,26 +1,30 @@
 
 package org.tempuri;
 
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlType;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetTipoVia;
 
-
 /**
- * <p>Classe Java per anonymous complex type.
+ * <p>
+ * Classe Java per anonymous complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType>
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="sitGetTipoViaResult" type="{http://schemas.datacontract.org/2004/07/WcfTopo}TopoService.typeGetTipoVia" minOccurs="0"/>
+ *         <element name="sitGetTipoViaResult" type=
+"{http://schemas.datacontract.org/2004/07/WcfTopo}TopoService.typeGetTipoVia" minOccurs
+="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -31,7 +35,7 @@ import org.datacontract.schemas._2004._07.wcftopo.TopoServiceTypeGetTipoVia;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "sitGetTipoViaResult"
+        "sitGetTipoViaResult"
 })
 @XmlRootElement(name = "sitGetTipoViaResponse")
 public class SitGetTipoViaResponse {
@@ -40,24 +44,26 @@ public class SitGetTipoViaResponse {
     protected JAXBElement<TopoServiceTypeGetTipoVia> sitGetTipoViaResult;
 
     /**
-     * Recupera il valore della proprietà sitGetTipoViaResult.
+     * Recupera il valore della proprietï¿½ sitGetTipoViaResult.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link TopoServiceTypeGetTipoVia }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link TopoServiceTypeGetTipoVia
+     *         }{@code >}
+     * 
      */
     public JAXBElement<TopoServiceTypeGetTipoVia> getSitGetTipoViaResult() {
         return sitGetTipoViaResult;
     }
 
     /**
-     * Imposta il valore della proprietà sitGetTipoViaResult.
+     * Imposta il valore della proprietï¿½ sitGetTipoViaResult.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link TopoServiceTypeGetTipoVia }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link TopoServiceTypeGetTipoVia
+     *              }{@code >}
+     * 
      */
     public void setSitGetTipoViaResult(JAXBElement<TopoServiceTypeGetTipoVia> value) {
         this.sitGetTipoViaResult = value;

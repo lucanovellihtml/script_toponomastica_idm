@@ -2,25 +2,31 @@
 package org.datacontract.schemas._2004._07.wcftopo;
 
 import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfint;
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlType;
-
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>Classe Java per TopoService.typeGetCivicoReplace complex type.
+ * <p>
+ * Classe Java per TopoService.typeGetCivicoReplace complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType name="TopoService.typeGetCivicoReplace">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Civic" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfint" minOccurs="0"/>
- *         <element name="Err" type="{http://schemas.datacontract.org/2004/07/WcfTopo}TopoService.typeError" minOccurs="0"/>
+ *         <element name="Civic" type=
+"{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfint" minOccurs
+="0"/>
+ *         <element name="Err" type=
+"{http://schemas.datacontract.org/2004/07/WcfTopo}TopoService.typeError" minOccurs
+="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -31,8 +37,8 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TopoService.typeGetCivicoReplace", propOrder = {
-    "civic",
-    "err"
+        "civic",
+        "err"
 })
 public class TopoServiceTypeGetCivicoReplace {
 
@@ -42,48 +48,49 @@ public class TopoServiceTypeGetCivicoReplace {
     protected JAXBElement<TopoServiceTypeError> err;
 
     /**
-     * Recupera il valore della proprietà civic.
+     * Recupera il valore della proprietï¿½ civic.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ArrayOfint }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link ArrayOfint }{@code >}
+     * 
      */
     public JAXBElement<ArrayOfint> getCivic() {
         return civic;
     }
 
     /**
-     * Imposta il valore della proprietà civic.
+     * Imposta il valore della proprietï¿½ civic.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ArrayOfint }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link ArrayOfint }{@code >}
+     * 
      */
     public void setCivic(JAXBElement<ArrayOfint> value) {
         this.civic = value;
     }
 
     /**
-     * Recupera il valore della proprietà err.
+     * Recupera il valore della proprietï¿½ err.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link TopoServiceTypeError }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link TopoServiceTypeError }{@code >}
+     * 
      */
     public JAXBElement<TopoServiceTypeError> getErr() {
         return err;
     }
 
     /**
-     * Imposta il valore della proprietà err.
+     * Imposta il valore della proprietï¿½ err.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link TopoServiceTypeError }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link TopoServiceTypeError
+     *              }{@code >}
+     * 
      */
     public void setErr(JAXBElement<TopoServiceTypeError> value) {
         this.err = value;

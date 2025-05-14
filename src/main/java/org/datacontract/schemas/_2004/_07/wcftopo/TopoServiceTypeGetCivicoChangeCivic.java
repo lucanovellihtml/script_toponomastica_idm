@@ -1,27 +1,32 @@
 
 package org.datacontract.schemas._2004._07.wcftopo;
 
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlType;
-
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>Classe Java per TopoService.typeGetCivicoChangeCivic complex type.
+ * <p>
+ * Classe Java per TopoService.typeGetCivicoChangeCivic complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType name="TopoService.typeGetCivicoChangeCivic">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="DateDown" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="DateUp" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="IDC" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="DateDown" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="DateUp" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="IDC" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -32,9 +37,9 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TopoService.typeGetCivicoChangeCivic", propOrder = {
-    "dateDown",
-    "dateUp",
-    "idc"
+        "dateDown",
+        "dateUp",
+        "idc"
 })
 public class TopoServiceTypeGetCivicoChangeCivic {
 
@@ -46,72 +51,72 @@ public class TopoServiceTypeGetCivicoChangeCivic {
     protected Integer idc;
 
     /**
-     * Recupera il valore della proprietà dateDown.
+     * Recupera il valore della proprietï¿½ dateDown.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getDateDown() {
         return dateDown;
     }
 
     /**
-     * Imposta il valore della proprietà dateDown.
+     * Imposta il valore della proprietï¿½ dateDown.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setDateDown(JAXBElement<String> value) {
         this.dateDown = value;
     }
 
     /**
-     * Recupera il valore della proprietà dateUp.
+     * Recupera il valore della proprietï¿½ dateUp.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getDateUp() {
         return dateUp;
     }
 
     /**
-     * Imposta il valore della proprietà dateUp.
+     * Imposta il valore della proprietï¿½ dateUp.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setDateUp(JAXBElement<String> value) {
         this.dateUp = value;
     }
 
     /**
-     * Recupera il valore della proprietà idc.
+     * Recupera il valore della proprietï¿½ idc.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getIDC() {
         return idc;
     }
 
     /**
-     * Imposta il valore della proprietà idc.
+     * Imposta il valore della proprietï¿½ idc.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setIDC(Integer value) {
         this.idc = value;

@@ -8,8 +8,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -23,27 +23,85 @@
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>4.0.2</version>
+            <version>2.3.3</version>
         </dependency>
 
         <dependency>
             <groupId>jakarta.xml.ws</groupId>
             <artifactId>jakarta.xml.ws-api</artifactId>
-            <version>4.0.2</version>
+            <version>2.3.3</version>
         </dependency>
 
         <dependency>
-            <groupId>com.sun.xml.ws</groupId>
-            <artifactId>jaxws-rt</artifactId>
-            <version>4.0.3</version>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <version>3.6.1</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.17.0</version>
+            <version>3.12.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.tirasa.connid</groupId>
+            <artifactId>connector-framework</artifactId>
+            <version>1.4.2.0</version>
         </dependency>
 
     </dependencies>
+
+    <build>
+
+        <finalName>script-toponomastica-idm</finalName>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.cdm.idm.toponomastica.AddressValidated</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>Toponomastica4.5-wsdl</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.outputDirectory}/wsdl</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources/wsdl</directory>
+                                    <includes>
+                                        <include>*.wsdl</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>

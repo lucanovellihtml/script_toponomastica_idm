@@ -1,33 +1,44 @@
 
 package org.datacontract.schemas._2004._07.wcftopo;
 
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlType;
-
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>Classe Java per TopoService.typeGetVieFTopoStreet complex type.
+ * <p>
+ * Classe Java per TopoService.typeGetVieFTopoStreet complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType name="TopoService.typeGetVieFTopoStreet">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="StateCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="StreetCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="Topo1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Topo2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Topo3" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Topo4" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Topo5" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="TopoVia" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Toponym" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="StateCode" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="StreetCode" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="Topo1" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Topo2" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Topo3" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Topo4" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Topo5" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="TopoVia" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Toponym" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -38,15 +49,15 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TopoService.typeGetVieFTopoStreet", propOrder = {
-    "stateCode",
-    "streetCode",
-    "topo1",
-    "topo2",
-    "topo3",
-    "topo4",
-    "topo5",
-    "topoVia",
-    "toponym"
+        "stateCode",
+        "streetCode",
+        "topo1",
+        "topo2",
+        "topo3",
+        "topo4",
+        "topo5",
+        "topoVia",
+        "toponym"
 })
 public class TopoServiceTypeGetVieFTopoStreet {
 
@@ -70,216 +81,216 @@ public class TopoServiceTypeGetVieFTopoStreet {
     protected JAXBElement<String> toponym;
 
     /**
-     * Recupera il valore della proprietà stateCode.
+     * Recupera il valore della proprietï¿½ stateCode.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getStateCode() {
         return stateCode;
     }
 
     /**
-     * Imposta il valore della proprietà stateCode.
+     * Imposta il valore della proprietï¿½ stateCode.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setStateCode(Integer value) {
         this.stateCode = value;
     }
 
     /**
-     * Recupera il valore della proprietà streetCode.
+     * Recupera il valore della proprietï¿½ streetCode.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getStreetCode() {
         return streetCode;
     }
 
     /**
-     * Imposta il valore della proprietà streetCode.
+     * Imposta il valore della proprietï¿½ streetCode.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setStreetCode(Integer value) {
         this.streetCode = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo1.
+     * Recupera il valore della proprietï¿½ topo1.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo1() {
         return topo1;
     }
 
     /**
-     * Imposta il valore della proprietà topo1.
+     * Imposta il valore della proprietï¿½ topo1.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo1(JAXBElement<String> value) {
         this.topo1 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo2.
+     * Recupera il valore della proprietï¿½ topo2.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo2() {
         return topo2;
     }
 
     /**
-     * Imposta il valore della proprietà topo2.
+     * Imposta il valore della proprietï¿½ topo2.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo2(JAXBElement<String> value) {
         this.topo2 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo3.
+     * Recupera il valore della proprietï¿½ topo3.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo3() {
         return topo3;
     }
 
     /**
-     * Imposta il valore della proprietà topo3.
+     * Imposta il valore della proprietï¿½ topo3.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo3(JAXBElement<String> value) {
         this.topo3 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo4.
+     * Recupera il valore della proprietï¿½ topo4.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo4() {
         return topo4;
     }
 
     /**
-     * Imposta il valore della proprietà topo4.
+     * Imposta il valore della proprietï¿½ topo4.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo4(JAXBElement<String> value) {
         this.topo4 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo5.
+     * Recupera il valore della proprietï¿½ topo5.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo5() {
         return topo5;
     }
 
     /**
-     * Imposta il valore della proprietà topo5.
+     * Imposta il valore della proprietï¿½ topo5.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo5(JAXBElement<String> value) {
         this.topo5 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topoVia.
+     * Recupera il valore della proprietï¿½ topoVia.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopoVia() {
         return topoVia;
     }
 
     /**
-     * Imposta il valore della proprietà topoVia.
+     * Imposta il valore della proprietï¿½ topoVia.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopoVia(JAXBElement<String> value) {
         this.topoVia = value;
     }
 
     /**
-     * Recupera il valore della proprietà toponym.
+     * Recupera il valore della proprietï¿½ toponym.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getToponym() {
         return toponym;
     }
 
     /**
-     * Imposta il valore della proprietà toponym.
+     * Imposta il valore della proprietï¿½ toponym.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setToponym(JAXBElement<String> value) {
         this.toponym = value;

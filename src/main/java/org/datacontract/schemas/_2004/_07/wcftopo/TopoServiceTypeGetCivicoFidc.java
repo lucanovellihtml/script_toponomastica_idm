@@ -1,51 +1,82 @@
 
 package org.datacontract.schemas._2004._07.wcftopo;
 
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlType;
-
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>Classe Java per TopoService.typeGetCivicoFidc complex type.
+ * <p>
+ * Classe Java per TopoService.typeGetCivicoFidc complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType name="TopoService.typeGetCivicoFidc">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Bar" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Bar2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="CAP" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Character" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Complete" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="CoordinateX" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
- *         <element name="CoordinateY" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
- *         <element name="DateDown" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="DateUp" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Err" type="{http://schemas.datacontract.org/2004/07/WcfTopo}TopoService.typeError" minOccurs="0"/>
- *         <element name="IDC" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="Number" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Permessi" type="{http://schemas.datacontract.org/2004/07/WcfTopo}ArrayOfTopoService.typePermessi" minOccurs="0"/>
- *         <element name="Replace" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="Residential" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="StateCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="StateDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="StreetCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="Topo1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Topo2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Topo3" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Topo4" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Topo5" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="TopoVia" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="Toponym" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="URL" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="ZDN" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Bar" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Bar2" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="CAP" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Character" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Complete" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="CoordinateX" type=
+"{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="CoordinateY" type=
+"{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="DateDown" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="DateUp" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Err" type=
+"{http://schemas.datacontract.org/2004/07/WcfTopo}TopoService.typeError" minOccurs
+="0"/>
+ *         <element name="IDC" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="Number" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Permessi" type=
+"{http://schemas.datacontract.org/2004/07/WcfTopo}ArrayOfTopoService.typePermessi" minOccurs
+="0"/>
+ *         <element name="Replace" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="Residential" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="StateCode" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="StateDescription" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="StreetCode" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="Topo1" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Topo2" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Topo3" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Topo4" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Topo5" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="TopoVia" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="Toponym" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="URL" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="ZDN" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -56,33 +87,33 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TopoService.typeGetCivicoFidc", propOrder = {
-    "bar",
-    "bar2",
-    "cap",
-    "character",
-    "complete",
-    "coordinateX",
-    "coordinateY",
-    "dateDown",
-    "dateUp",
-    "err",
-    "idc",
-    "number",
-    "permessi",
-    "replace",
-    "residential",
-    "stateCode",
-    "stateDescription",
-    "streetCode",
-    "topo1",
-    "topo2",
-    "topo3",
-    "topo4",
-    "topo5",
-    "topoVia",
-    "toponym",
-    "url",
-    "zdn"
+        "bar",
+        "bar2",
+        "cap",
+        "character",
+        "complete",
+        "coordinateX",
+        "coordinateY",
+        "dateDown",
+        "dateUp",
+        "err",
+        "idc",
+        "number",
+        "permessi",
+        "replace",
+        "residential",
+        "stateCode",
+        "stateDescription",
+        "streetCode",
+        "topo1",
+        "topo2",
+        "topo3",
+        "topo4",
+        "topo5",
+        "topoVia",
+        "toponym",
+        "url",
+        "zdn"
 })
 public class TopoServiceTypeGetCivicoFidc {
 
@@ -142,648 +173,651 @@ public class TopoServiceTypeGetCivicoFidc {
     protected JAXBElement<String> zdn;
 
     /**
-     * Recupera il valore della proprietà bar.
+     * Recupera il valore della proprietï¿½ bar.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getBar() {
         return bar;
     }
 
     /**
-     * Imposta il valore della proprietà bar.
+     * Imposta il valore della proprietï¿½ bar.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setBar(JAXBElement<String> value) {
         this.bar = value;
     }
 
     /**
-     * Recupera il valore della proprietà bar2.
+     * Recupera il valore della proprietï¿½ bar2.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getBar2() {
         return bar2;
     }
 
     /**
-     * Imposta il valore della proprietà bar2.
+     * Imposta il valore della proprietï¿½ bar2.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setBar2(JAXBElement<String> value) {
         this.bar2 = value;
     }
 
     /**
-     * Recupera il valore della proprietà cap.
+     * Recupera il valore della proprietï¿½ cap.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getCAP() {
         return cap;
     }
 
     /**
-     * Imposta il valore della proprietà cap.
+     * Imposta il valore della proprietï¿½ cap.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setCAP(JAXBElement<String> value) {
         this.cap = value;
     }
 
     /**
-     * Recupera il valore della proprietà character.
+     * Recupera il valore della proprietï¿½ character.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getCharacter() {
         return character;
     }
 
     /**
-     * Imposta il valore della proprietà character.
+     * Imposta il valore della proprietï¿½ character.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setCharacter(JAXBElement<String> value) {
         this.character = value;
     }
 
     /**
-     * Recupera il valore della proprietà complete.
+     * Recupera il valore della proprietï¿½ complete.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getComplete() {
         return complete;
     }
 
     /**
-     * Imposta il valore della proprietà complete.
+     * Imposta il valore della proprietï¿½ complete.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setComplete(JAXBElement<String> value) {
         this.complete = value;
     }
 
     /**
-     * Recupera il valore della proprietà coordinateX.
+     * Recupera il valore della proprietï¿½ coordinateX.
      * 
      * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *         possible object is
+     *         {@link Double }
+     * 
      */
     public Double getCoordinateX() {
         return coordinateX;
     }
 
     /**
-     * Imposta il valore della proprietà coordinateX.
+     * Imposta il valore della proprietï¿½ coordinateX.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *              allowed object is
+     *              {@link Double }
+     * 
      */
     public void setCoordinateX(Double value) {
         this.coordinateX = value;
     }
 
     /**
-     * Recupera il valore della proprietà coordinateY.
+     * Recupera il valore della proprietï¿½ coordinateY.
      * 
      * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *         possible object is
+     *         {@link Double }
+     * 
      */
     public Double getCoordinateY() {
         return coordinateY;
     }
 
     /**
-     * Imposta il valore della proprietà coordinateY.
+     * Imposta il valore della proprietï¿½ coordinateY.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *              allowed object is
+     *              {@link Double }
+     * 
      */
     public void setCoordinateY(Double value) {
         this.coordinateY = value;
     }
 
     /**
-     * Recupera il valore della proprietà dateDown.
+     * Recupera il valore della proprietï¿½ dateDown.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getDateDown() {
         return dateDown;
     }
 
     /**
-     * Imposta il valore della proprietà dateDown.
+     * Imposta il valore della proprietï¿½ dateDown.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setDateDown(JAXBElement<String> value) {
         this.dateDown = value;
     }
 
     /**
-     * Recupera il valore della proprietà dateUp.
+     * Recupera il valore della proprietï¿½ dateUp.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getDateUp() {
         return dateUp;
     }
 
     /**
-     * Imposta il valore della proprietà dateUp.
+     * Imposta il valore della proprietï¿½ dateUp.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setDateUp(JAXBElement<String> value) {
         this.dateUp = value;
     }
 
     /**
-     * Recupera il valore della proprietà err.
+     * Recupera il valore della proprietï¿½ err.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link TopoServiceTypeError }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link TopoServiceTypeError }{@code >}
+     * 
      */
     public JAXBElement<TopoServiceTypeError> getErr() {
         return err;
     }
 
     /**
-     * Imposta il valore della proprietà err.
+     * Imposta il valore della proprietï¿½ err.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link TopoServiceTypeError }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link TopoServiceTypeError
+     *              }{@code >}
+     * 
      */
     public void setErr(JAXBElement<TopoServiceTypeError> value) {
         this.err = value;
     }
 
     /**
-     * Recupera il valore della proprietà idc.
+     * Recupera il valore della proprietï¿½ idc.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getIDC() {
         return idc;
     }
 
     /**
-     * Imposta il valore della proprietà idc.
+     * Imposta il valore della proprietï¿½ idc.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setIDC(Integer value) {
         this.idc = value;
     }
 
     /**
-     * Recupera il valore della proprietà number.
+     * Recupera il valore della proprietï¿½ number.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getNumber() {
         return number;
     }
 
     /**
-     * Imposta il valore della proprietà number.
+     * Imposta il valore della proprietï¿½ number.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setNumber(JAXBElement<String> value) {
         this.number = value;
     }
 
     /**
-     * Recupera il valore della proprietà permessi.
+     * Recupera il valore della proprietï¿½ permessi.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ArrayOfTopoServiceTypePermessi }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link ArrayOfTopoServiceTypePermessi
+     *         }{@code >}
+     * 
      */
     public JAXBElement<ArrayOfTopoServiceTypePermessi> getPermessi() {
         return permessi;
     }
 
     /**
-     * Imposta il valore della proprietà permessi.
+     * Imposta il valore della proprietï¿½ permessi.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ArrayOfTopoServiceTypePermessi }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement
+     *              }{@code <}{@link ArrayOfTopoServiceTypePermessi }{@code >}
+     * 
      */
     public void setPermessi(JAXBElement<ArrayOfTopoServiceTypePermessi> value) {
         this.permessi = value;
     }
 
     /**
-     * Recupera il valore della proprietà replace.
+     * Recupera il valore della proprietï¿½ replace.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getReplace() {
         return replace;
     }
 
     /**
-     * Imposta il valore della proprietà replace.
+     * Imposta il valore della proprietï¿½ replace.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setReplace(Integer value) {
         this.replace = value;
     }
 
     /**
-     * Recupera il valore della proprietà residential.
+     * Recupera il valore della proprietï¿½ residential.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getResidential() {
         return residential;
     }
 
     /**
-     * Imposta il valore della proprietà residential.
+     * Imposta il valore della proprietï¿½ residential.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setResidential(Integer value) {
         this.residential = value;
     }
 
     /**
-     * Recupera il valore della proprietà stateCode.
+     * Recupera il valore della proprietï¿½ stateCode.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getStateCode() {
         return stateCode;
     }
 
     /**
-     * Imposta il valore della proprietà stateCode.
+     * Imposta il valore della proprietï¿½ stateCode.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setStateCode(Integer value) {
         this.stateCode = value;
     }
 
     /**
-     * Recupera il valore della proprietà stateDescription.
+     * Recupera il valore della proprietï¿½ stateDescription.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getStateDescription() {
         return stateDescription;
     }
 
     /**
-     * Imposta il valore della proprietà stateDescription.
+     * Imposta il valore della proprietï¿½ stateDescription.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setStateDescription(JAXBElement<String> value) {
         this.stateDescription = value;
     }
 
     /**
-     * Recupera il valore della proprietà streetCode.
+     * Recupera il valore della proprietï¿½ streetCode.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getStreetCode() {
         return streetCode;
     }
 
     /**
-     * Imposta il valore della proprietà streetCode.
+     * Imposta il valore della proprietï¿½ streetCode.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setStreetCode(Integer value) {
         this.streetCode = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo1.
+     * Recupera il valore della proprietï¿½ topo1.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo1() {
         return topo1;
     }
 
     /**
-     * Imposta il valore della proprietà topo1.
+     * Imposta il valore della proprietï¿½ topo1.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo1(JAXBElement<String> value) {
         this.topo1 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo2.
+     * Recupera il valore della proprietï¿½ topo2.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo2() {
         return topo2;
     }
 
     /**
-     * Imposta il valore della proprietà topo2.
+     * Imposta il valore della proprietï¿½ topo2.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo2(JAXBElement<String> value) {
         this.topo2 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo3.
+     * Recupera il valore della proprietï¿½ topo3.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo3() {
         return topo3;
     }
 
     /**
-     * Imposta il valore della proprietà topo3.
+     * Imposta il valore della proprietï¿½ topo3.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo3(JAXBElement<String> value) {
         this.topo3 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo4.
+     * Recupera il valore della proprietï¿½ topo4.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo4() {
         return topo4;
     }
 
     /**
-     * Imposta il valore della proprietà topo4.
+     * Imposta il valore della proprietï¿½ topo4.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo4(JAXBElement<String> value) {
         this.topo4 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topo5.
+     * Recupera il valore della proprietï¿½ topo5.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopo5() {
         return topo5;
     }
 
     /**
-     * Imposta il valore della proprietà topo5.
+     * Imposta il valore della proprietï¿½ topo5.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopo5(JAXBElement<String> value) {
         this.topo5 = value;
     }
 
     /**
-     * Recupera il valore della proprietà topoVia.
+     * Recupera il valore della proprietï¿½ topoVia.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getTopoVia() {
         return topoVia;
     }
 
     /**
-     * Imposta il valore della proprietà topoVia.
+     * Imposta il valore della proprietï¿½ topoVia.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setTopoVia(JAXBElement<String> value) {
         this.topoVia = value;
     }
 
     /**
-     * Recupera il valore della proprietà toponym.
+     * Recupera il valore della proprietï¿½ toponym.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getToponym() {
         return toponym;
     }
 
     /**
-     * Imposta il valore della proprietà toponym.
+     * Imposta il valore della proprietï¿½ toponym.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setToponym(JAXBElement<String> value) {
         this.toponym = value;
     }
 
     /**
-     * Recupera il valore della proprietà url.
+     * Recupera il valore della proprietï¿½ url.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getURL() {
         return url;
     }
 
     /**
-     * Imposta il valore della proprietà url.
+     * Imposta il valore della proprietï¿½ url.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setURL(JAXBElement<String> value) {
         this.url = value;
     }
 
     /**
-     * Recupera il valore della proprietà zdn.
+     * Recupera il valore della proprietï¿½ zdn.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getZDN() {
         return zdn;
     }
 
     /**
-     * Imposta il valore della proprietà zdn.
+     * Imposta il valore della proprietï¿½ zdn.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setZDN(JAXBElement<String> value) {
         this.zdn = value;

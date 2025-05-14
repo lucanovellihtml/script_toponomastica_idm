@@ -3,23 +3,27 @@ package org.datacontract.schemas._2004._07.wcftopo;
 
 import java.util.ArrayList;
 import java.util.List;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlType;
-
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>Classe Java per ArrayOfTopoService.typeGetCivicoStoryCivic complex type.
+ * <p>
+ * Classe Java per ArrayOfTopoService.typeGetCivicoStoryCivic complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType name="ArrayOfTopoService.typeGetCivicoStoryCivic">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="TopoService.typeGetCivicoStoryCivic" type="{http://schemas.datacontract.org/2004/07/WcfTopo}TopoService.typeGetCivicoStoryCivic" maxOccurs="unbounded" minOccurs="0"/>
+ *         <element name="TopoService.typeGetCivicoStoryCivic" type=
+"{http://schemas.datacontract.org/2004/07/WcfTopo}TopoService.typeGetCivicoStoryCivic" maxOccurs
+="unbounded" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -30,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ArrayOfTopoService.typeGetCivicoStoryCivic", propOrder = {
-    "topoServiceTypeGetCivicoStoryCivic"
+        "topoServiceTypeGetCivicoStoryCivic"
 })
 public class ArrayOfTopoServiceTypeGetCivicoStoryCivic {
 
@@ -43,13 +47,15 @@ public class ArrayOfTopoServiceTypeGetCivicoStoryCivic {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the topoServiceTypeGetCivicoStoryCivic property.
+     * returned list will be present inside the javax XML Binding object.
+     * This is why there is not a {@code set} method for the
+     * topoServiceTypeGetCivicoStoryCivic property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getTopoServiceTypeGetCivicoStoryCivic().add(newItem);
+     * getTopoServiceTypeGetCivicoStoryCivic().add(newItem);
      * </pre>
      * 
      * 
@@ -59,7 +65,7 @@ public class ArrayOfTopoServiceTypeGetCivicoStoryCivic {
      * 
      * 
      * @return
-     *     The value of the topoServiceTypeGetCivicoStoryCivic property.
+     *         The value of the topoServiceTypeGetCivicoStoryCivic property.
      */
     public List<TopoServiceTypeGetCivicoStoryCivic> getTopoServiceTypeGetCivicoStoryCivic() {
         if (topoServiceTypeGetCivicoStoryCivic == null) {

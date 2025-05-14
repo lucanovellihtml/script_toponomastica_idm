@@ -12,8 +12,8 @@ import org.tempuri.Toponomastica45;
 import org.tempuri.Toponomastica45PortType;
 import com.cdm.idm.toponomastica.util.ConstantToponomastica;
 
-import jakarta.xml.ws.BindingProvider;
-import jakarta.xml.ws.handler.MessageContext;
+import javax.xml.ws.BindingProvider;
+import javax.xml.ws.handler.MessageContext;
 
 public class ServiceCivicCode {
 

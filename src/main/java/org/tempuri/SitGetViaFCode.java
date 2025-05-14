@@ -1,29 +1,36 @@
 
 package org.tempuri;
 
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlType;
-
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>Classe Java per anonymous complex type.
+ * <p>
+ * Classe Java per anonymous complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType>
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="pToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="pStreetCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="pCivic" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="pState" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="pReference" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="pToken" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="pStreetCode" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="pCivic" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="pState" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="pReference" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -34,11 +41,11 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "pToken",
-    "pStreetCode",
-    "pCivic",
-    "pState",
-    "pReference"
+        "pToken",
+        "pStreetCode",
+        "pCivic",
+        "pState",
+        "pReference"
 })
 @XmlRootElement(name = "sitGetViaFCode")
 public class SitGetViaFCode {
@@ -52,120 +59,120 @@ public class SitGetViaFCode {
     protected Integer pReference;
 
     /**
-     * Recupera il valore della proprietà pToken.
+     * Recupera il valore della proprietï¿½ pToken.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getPToken() {
         return pToken;
     }
 
     /**
-     * Imposta il valore della proprietà pToken.
+     * Imposta il valore della proprietï¿½ pToken.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setPToken(JAXBElement<String> value) {
         this.pToken = value;
     }
 
     /**
-     * Recupera il valore della proprietà pStreetCode.
+     * Recupera il valore della proprietï¿½ pStreetCode.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getPStreetCode() {
         return pStreetCode;
     }
 
     /**
-     * Imposta il valore della proprietà pStreetCode.
+     * Imposta il valore della proprietï¿½ pStreetCode.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setPStreetCode(Integer value) {
         this.pStreetCode = value;
     }
 
     /**
-     * Recupera il valore della proprietà pCivic.
+     * Recupera il valore della proprietï¿½ pCivic.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getPCivic() {
         return pCivic;
     }
 
     /**
-     * Imposta il valore della proprietà pCivic.
+     * Imposta il valore della proprietï¿½ pCivic.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setPCivic(JAXBElement<String> value) {
         this.pCivic = value;
     }
 
     /**
-     * Recupera il valore della proprietà pState.
+     * Recupera il valore della proprietï¿½ pState.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getPState() {
         return pState;
     }
 
     /**
-     * Imposta il valore della proprietà pState.
+     * Imposta il valore della proprietï¿½ pState.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setPState(Integer value) {
         this.pState = value;
     }
 
     /**
-     * Recupera il valore della proprietà pReference.
+     * Recupera il valore della proprietï¿½ pReference.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getPReference() {
         return pReference;
     }
 
     /**
-     * Imposta il valore della proprietà pReference.
+     * Imposta il valore della proprietï¿½ pReference.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setPReference(Integer value) {
         this.pReference = value;

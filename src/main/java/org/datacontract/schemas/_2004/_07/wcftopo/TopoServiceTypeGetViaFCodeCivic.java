@@ -1,29 +1,36 @@
 
 package org.datacontract.schemas._2004._07.wcftopo;
 
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlType;
-
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>Classe Java per TopoService.typeGetViaFCodeCivic complex type.
+ * <p>
+ * Classe Java per TopoService.typeGetViaFCodeCivic complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * Il seguente frammento di schema specifica il contenuto previsto contenuto in
+ * questa classe.
  * 
  * <pre>{@code
  * <complexType name="TopoService.typeGetViaFCodeCivic">
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="CoordinateX" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
- *         <element name="CoordinateY" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
- *         <element name="IDC" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="StateCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         <element name="Toponym" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         <element name="CoordinateX" type=
+"{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="CoordinateY" type=
+"{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         <element name="IDC" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="StateCode" type=
+"{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         <element name="Toponym" type=
+"{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -34,11 +41,11 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TopoService.typeGetViaFCodeCivic", propOrder = {
-    "coordinateX",
-    "coordinateY",
-    "idc",
-    "stateCode",
-    "toponym"
+        "coordinateX",
+        "coordinateY",
+        "idc",
+        "stateCode",
+        "toponym"
 })
 public class TopoServiceTypeGetViaFCodeCivic {
 
@@ -54,120 +61,120 @@ public class TopoServiceTypeGetViaFCodeCivic {
     protected JAXBElement<String> toponym;
 
     /**
-     * Recupera il valore della proprietà coordinateX.
+     * Recupera il valore della proprietï¿½ coordinateX.
      * 
      * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *         possible object is
+     *         {@link Double }
+     * 
      */
     public Double getCoordinateX() {
         return coordinateX;
     }
 
     /**
-     * Imposta il valore della proprietà coordinateX.
+     * Imposta il valore della proprietï¿½ coordinateX.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *              allowed object is
+     *              {@link Double }
+     * 
      */
     public void setCoordinateX(Double value) {
         this.coordinateX = value;
     }
 
     /**
-     * Recupera il valore della proprietà coordinateY.
+     * Recupera il valore della proprietï¿½ coordinateY.
      * 
      * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *         possible object is
+     *         {@link Double }
+     * 
      */
     public Double getCoordinateY() {
         return coordinateY;
     }
 
     /**
-     * Imposta il valore della proprietà coordinateY.
+     * Imposta il valore della proprietï¿½ coordinateY.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *              allowed object is
+     *              {@link Double }
+     * 
      */
     public void setCoordinateY(Double value) {
         this.coordinateY = value;
     }
 
     /**
-     * Recupera il valore della proprietà idc.
+     * Recupera il valore della proprietï¿½ idc.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getIDC() {
         return idc;
     }
 
     /**
-     * Imposta il valore della proprietà idc.
+     * Imposta il valore della proprietï¿½ idc.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setIDC(Integer value) {
         this.idc = value;
     }
 
     /**
-     * Recupera il valore della proprietà stateCode.
+     * Recupera il valore della proprietï¿½ stateCode.
      * 
      * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *         possible object is
+     *         {@link Integer }
+     * 
      */
     public Integer getStateCode() {
         return stateCode;
     }
 
     /**
-     * Imposta il valore della proprietà stateCode.
+     * Imposta il valore della proprietï¿½ stateCode.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *              allowed object is
+     *              {@link Integer }
+     * 
      */
     public void setStateCode(Integer value) {
         this.stateCode = value;
     }
 
     /**
-     * Recupera il valore della proprietà toponym.
+     * Recupera il valore della proprietï¿½ toponym.
      * 
      * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *         possible object is
+     *         {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public JAXBElement<String> getToponym() {
         return toponym;
     }
 
     /**
-     * Imposta il valore della proprietà toponym.
+     * Imposta il valore della proprietï¿½ toponym.
      * 
      * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
+     *              allowed object is
+     *              {@link JAXBElement }{@code <}{@link String }{@code >}
+     * 
      */
     public void setToponym(JAXBElement<String> value) {
         this.toponym = value;
